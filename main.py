@@ -1,43 +1,49 @@
-#Put the instances here to check functionality
+#Main file to test instances to ensure functionality
+
 from SavingsAccount import SavingsAccount
 from checking import CheckingAccount
 
-#CheckingAccount instances
 
+print("----- Savings Account #1 -----")
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-#SavingsAccount Instances
-#trying again 2
-print("---- Savings Account #1 ----")
 sav1 = SavingsAccount("S1", 1000, 100, 0.05)
+
 sav1.print_balance()
 sav1.deposit(200)
 sav1.withdraw(300)
 sav1.add_interest()
 sav1.print_balance()
 
-print("\n---- Savings Account #2 ----")
+
+print("\n----- Savings Account #2 -----")
+
 sav2 = SavingsAccount("S2", 5000, 200, 0.03)
+
 sav2.print_balance()
 sav2.deposit(500)
 sav2.withdraw(1000)
 sav2.add_interest()
 sav2.print_balance()
+
+
+print("\n----- Checking Account #1 -----")
+
+chk1 = CheckingAccount("C1", 2000, 100, 500)
+
+chk1.print_balance()
+chk1.deposit(300)
+chk1.withdraw(200)
+chk1.transfer(400)
+chk1.print_balance()
+
+
+print("\n----- Checking Account #2 -----")
+
+chk2 = CheckingAccount("C2", 3000, 100, 1000)
+
+chk2.print_balance()
+chk2.deposit(500)
+chk2.withdraw(500)
+chk2.transfer(1200)  # Should fail
+chk2.transfer(800)   # Should work
+chk2.print_balance()
