@@ -1,0 +1,20 @@
+from BankAccount import BankAccount
+
+class SavingsAccount(BankAccount):
+    def __init__(self, customer_name, current_balance, minimum_balance, interest rate):
+
+        super().__init__(
+            customer_name,
+            current_balance,
+            minimum_balance
+        )
+
+        self.interest_rate = interest rate
+
+    def add_interest(self):
+        interest = self.current_balance * self.interest_rate
+        self.current_balance += interest
+
+        print(f"Interest added: ${interest:.2f}")
+        print(f"New Balance: ${self.current_balance:.2f}")
+
