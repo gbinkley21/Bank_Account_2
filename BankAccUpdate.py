@@ -37,23 +37,24 @@ class BankAccount:
 
 if __name__ == "__main__":
 
-    acc1 = BankAccount("A1", 300, 100)
+    acc1 = BankAccount("A1", 300, 100, "A11111", "R0000")
     acc1.print_balance()
 
     acc1.deposit(100)
     acc1.withdraw(100)
-    acc1.withdraw(700)  # This should nto work.
+    acc1.withdraw(700)  # This should not work
 
     acc1.print_balance()
 
     print("\n")
 
-    acc2 = BankAccount("A2", 300, 100)
+    # FIX: Changed cc2 to acc2
+    acc2 = BankAccount("A2", 300, 100, "A22222", "RT000")
     acc2.print_balance()
 
     acc2.deposit(300)
     acc2.withdraw(200)
-    acc2.deposit(-200)  # This should not work.
-    acc2.withdraw(700)  # This should not work.
+    acc2.deposit(-200)  # This should not work
+    acc2.withdraw(700)  # This should not work
 
     acc2.print_balance()
