@@ -18,16 +18,3 @@ class SavingsAccount(BankAccount):
         print(f"Interest added: ${interest:.2f}")
         print(f"New Balance: ${self.current_balance:.2f}")
 
-    if __name__ == "__main__":
-
-        sav1 = SavingsAccount("S1", 1000, 100, 0.05)
-        sav1.print_balance()
-        sav1.add_interest()
-        sav1.print_balance()
-
-        print("\n")
-
-        sav2 = SavingsAccount("S2", 5000, 200, 0.03)
-        sav2.print_balance()
-        sav2.add_interest()
-        sav2.print_balance()
